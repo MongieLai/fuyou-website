@@ -1,24 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import TopImg from './images/LOGO.png'
+import { Navbar, NavDropdown, Container, Col, Row } from 'react-bootstrap'
+import { HashRouter as Router, Route } from 'react-router-dom'
+import Nav from './components/Nav'
+import Lunbo from './components/lunbo'
+import Footer from './components/Footer'
+import Home from './components/Home'
+import styled from 'styled-components'
+import wechat from './images/weixin.jpg'
+const FixWechat = styled.img`
+  width:120px;
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  z-index: 999;
+`
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <FixWechat src={wechat} art="weixin" />
+        <Container>
+          <Row>
+            <Col>
+              <img style={{ marginBottom: 20, marginTop: 20 }} src={TopImg}></img>
+            </Col>
+          </Row>
+          <Nav></Nav>
+          <Lunbo />
+
+          <Route path='/home' component={Home} />
+
+
+        </Container>
+        <Footer />
+      </Router>
     </div>
   );
 }
