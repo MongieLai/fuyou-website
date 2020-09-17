@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Carousel } from 'react-bootstrap'
 
-import ww from '../images/lunbo1.jpg'
 export class lunbo extends Component {
     constructor(props) {
         super(props)
@@ -24,21 +23,21 @@ export class lunbo extends Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src={ww}
+                            src={require('../images/lunbo1.jpg')}
                             alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src={ww}
+                            src={require('../images/lunbo2.jpg')}
                             alt="Second slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src={ww}
+                            src={require('../images/lunbo3.jpg')}
                             alt="Third slide"
                         />
                     </Carousel.Item>

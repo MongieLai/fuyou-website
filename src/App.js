@@ -4,7 +4,7 @@ import TopImg from './images/LOGO.png'
 import { Navbar, NavDropdown, Container, Col, Row } from 'react-bootstrap'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Nav from './components/Nav'
-import Lunbo from './components/lunbo'
+import Carousel from './components/Carousel'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import styled from 'styled-components'
@@ -28,11 +28,9 @@ function App() {
             </Col>
           </Row>
           <Nav></Nav>
-          <Lunbo />
-
+          <Carousel />
           <Route path='/home' component={Home} />
-
-
+          <Route path='/link' component={Home} />
         </Container>
         <Footer />
       </Router>
